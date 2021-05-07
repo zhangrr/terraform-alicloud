@@ -58,7 +58,15 @@ variable "cluster_addons" {
     {
       "name"     = "flannel",
       "config"   = "",
-    }
+    },
+    {
+      "name"     = "csi-plugin",
+      "config"   = "",
+    },
+    {
+      "name"     = "csi-provisioner",
+      "config"   = "",
+    } 
   ]
 }
 # kubernetes托管版
