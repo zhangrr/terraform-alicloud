@@ -89,6 +89,8 @@ resource "alicloud_cs_managed_kubernetes" "default" {
   new_nat_gateway           = true
   # 是否为API Server创建Internet负载均衡。默认为false。
   slb_internet_enabled      = true
+  # slb的实例类型
+  load_balancer_spec        = "slb.s1.small"
   # 节点的系统磁盘类别。其有效值为cloud_ssd和cloud_efficiency。默认为cloud_efficiency。
   worker_disk_category      = "cloud_efficiency"
   # 节点的数据磁盘类别。其有效值为cloud_ssd和cloud_efficiency，如果未设置，将不会创建数据磁盘。
