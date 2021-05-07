@@ -33,7 +33,8 @@ resource "alicloud_vswitch" "vswitches" {
   name              = local.new_vsw_name
   vpc_id            = alicloud_vpc.default.id
   cidr_block        = "172.19.240.0/20"
-  availability_zone = data.alicloud_zones.default.zones[0].id
+  #availability_zone = data.alicloud_zones.default.zones[0].id
+  availability_zone = "cn-shanghai-g"
 }
 # 日志服务
 resource "alicloud_log_project" "log" {
